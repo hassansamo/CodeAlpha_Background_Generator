@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
+
+body {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.5s;
+}
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 5rem;
+  letter-spacing: 1.6px;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+}
+
+.container {
+  margin-top: 10em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.color-code {
+  font-size: 2rem;
+  margin-bottom: 1.5em;
+  color: #fff;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.button-container {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+button {
+  font-size: 1rem;
+}
+
+.btn {
+  border: none;
+  width: 15em;
+  height: 5em;
+  border-radius: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background: black;
+  cursor: pointer;
+  transition: background 450ms ease-in-out;
+  color: white;
+}
+
+.sparkle {
+  transition: all 800ms ease;
+}
+
+.text {
+  font-weight: 600;
+  font-family: "Oswald", sans-serif;
+  transition: color 450ms ease-in-out;
+}
+
+.btn:hover {
+  background: linear-gradient(
+    0deg,
+    rgb(214, 214, 214),
+    rgb(228, 228, 228)
+  ); /* Change the background to a white gradient on hover */
+  transform: translateY(-2px);
+  color: black;
+}
+
+.btn:hover .sparkle {
+  transform: scale(1.2);
+  fill: black;
+}
+
+.copy {
+  box-sizing: border-box;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.checkmark {
+  display: none;
+}
+
+.copy:focus:not(:focus-visible) .clipboard {
+  display: none;
+}
+
+.copy:focus:not(:focus-visible) .checkmark {
+  display: block;
+}
+
+.copy:hover,
+.copy:focus {
+  background-color: #353434;
+}
+
+.copy:active {
+  outline: 1px solid white;
+}
+
+.copy:hover svg {
+  color: #cccccc;
+}
+
+.copy-message {
+  font-size: 18px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease-in-out;
+}
